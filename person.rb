@@ -28,4 +28,3 @@ class Person < Nameable
     false
   end
 end
-
