@@ -40,6 +40,26 @@ class App
     end
   end
 
+  def create_student
+    puts 'Create a new student'
+    print 'Enter student age: '
+    age = gets.chomp.to_i
+    print 'Enter student name: '
+    name = gets.chomp
+    print 'Has parent permission? [Y/N]: '
+    parent_permission = gets.chomp.downcase
+    case parent_permission
+    when 'y'
+      parent_permission = true
+    when 'n'
+      parent_permission = false
+    end
+    Student.new()
+  end
+
+  def create_teacher
+  end
+
   def add_book
     puts 'Create a new book'
     print 'Enter book title:'
