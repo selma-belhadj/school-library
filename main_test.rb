@@ -67,7 +67,8 @@ puts('Number of students in Classroom A: ', classroom1.students.count)
 puts('Number of students in Classroom B: ', classroom2.students.count)
 puts('Number of students in Classroom C: ', classroom3.students.count)
 
-###################
+#************************************************************#
+
 person1 = Person.new(32, 'Sarah')
 person2 = Person.new(27, 'Sissa')
 
@@ -79,7 +80,17 @@ rental1 = Rental.new('2017-10-11', book1, person1)
 rental2 = Rental.new('2018-11-12', book2, person1)
 rental3 = Rental.new('2019-12-10', book3, person2)
 
+
+puts book1.add_rental('2017-10-11', person1)
+puts person1.add_rental('2017-10-11', book1)
+
+puts book2.add_rental('2018-07-12', person1)
+puts person1.add_rental('2014-09-08', book2)
+puts book2.add_rental('2019-01-12', person2)
+
 puts "Number of books rented by #{person1.name} = #{person1.rentals.length}"
 puts "Number of books rented by #{person2.name} = #{person2.rentals.length}"
 
 puts rental1.rental_info, rental2.rental_info, rental3.rental_info
+
+#************************************************************#
