@@ -1,14 +1,14 @@
 require './app'
 
 def main
-  puts 'Welcome to the school library app'
+  puts '********** Welcome to the school library app **********'
   app = App.new
   app.start_console
 end
 
 def list_options
   puts
-  puts " Please choose among the options below by pressing its corresponding number:"
+  puts ' Please choose among the options below by pressing its corresponding number:'
   puts '[1] List all books'
   puts '[2] List all people'
   puts '[3] Add a person'
@@ -19,31 +19,31 @@ def list_options
   gets.chomp
 end
 
-def choose_option
+def option
   case list_options
   when '1'
     list_books
-    choose_option
+    option
   when '2'
     list_persons
-    choose_option
+    option
   when '3'
     add_person
-    choose_option
+    option
   when '4'
     add_book
-    choose_option
+    option
   when '5'
     add_rental
-    choose_option
+    option
   when '6'
     list_filtred_rentals
-    choose_option
+    option
   when '7'
-    puts 'Thank you for using the app!'
+    puts 'Thank you for using this app!'
   else
     puts 'Please enter a number between 1 and 7.'
-    choose_option
+    option
   end
 end
 
