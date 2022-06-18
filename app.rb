@@ -14,7 +14,15 @@ class App
   end
 
   def start_console
-    option
+    puts '********** Welcome to the school library app **********'
+    until list_options
+      input = gets.chomp
+      if input == '7'
+        puts 'Thank You for using this school library app!'
+        break
+      end
+      option(input)
+    end
   end
 
   def list_books
@@ -64,7 +72,6 @@ class App
       create_student
     end
     @persons << student
-    puts ''
     puts '********** Student created successfully **********'
   end
 
