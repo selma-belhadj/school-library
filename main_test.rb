@@ -35,7 +35,6 @@ require './rental'
 # puts "teacher_three can use services: #{teacher_three.can_use_services?}"
 # puts "teacher_four ca use services: #{teacher_four.can_use_services?}"
 
-
 # create classroom objects
 classroom1 = Classroom.new('A')
 classroom2 = Classroom.new('B')
