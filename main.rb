@@ -31,9 +31,17 @@ def option(input)
     add_rental
   when '6'
     list_filtred_rentals
+  when '7'
+    exit_msg
   else
     puts 'Please enter a number between 1 and 7.'
   end
+end
+
+def exit_msg
+  puts ' '
+  puts 'Thank you for using this App'
+  exit(true)
 end
 
 main

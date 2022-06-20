@@ -17,10 +17,6 @@ class App
     puts '********** Welcome to the school library app **********'
     until list_options
       input = gets.chomp
-      if input == '7'
-        puts 'Thank You for using this school library app!'
-        break
-      end
       option(input)
     end
   end

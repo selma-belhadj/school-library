@@ -23,7 +23,21 @@
 
 - GitHub: [@selma-belhadj](https://github.com/selma-belhadj)
 - Twitter: [@Bel_Selma16](https://twitter.com/Bel_Selma16)
-- LinkedIn: [@selma-belhadj](https://www.linkedin.com/in/selma-belhadj/) linkedin.com/in/linkedinhandle)
+- LinkedIn: [@selma-belhadj](https://www.linkedin.com/in/selma-belhadj/)
+
+
+👤 **Sangwa Didier**
+
+- GitHub: [Didier Sangwa](https://github.com/sangwa7)
+- Twitter: [@sangwa_7](https://twitter.com/sangwa_7)
+- LinkedIn: [Didier Sangwa](https://www.linkedin.com/in/didier-sangwa)
+
+
+👤 **Nemwel Boniface**
+
+- GitHub: [@Nemwel Boniface](https://github.com/Nemwel-Boniface)
+- Twitter: [@Nemwel Boniface](https://twitter.com/nemwel_bonie)
+- LinkedIn: [@Nemwel Bonifacej](https://www.linkedin.com/in/nemwel-nyandoroj/)
 
 ## 🤝 Contributing
 
