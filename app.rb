@@ -17,14 +17,9 @@ class App
     puts '********** Welcome to the school library app **********'
     until list_options
       input = gets.chomp
-      if input == '7'
-        puts 'Thank You for using this school library app!'
-        break
-      end
       option(input)
     end
   end
-
   def list_books
     puts 'there is no book in the library' if @books.empty?
     @books.each_with_index do |book, index|
