@@ -20,6 +20,7 @@ class App
       option(input)
     end
   end
+
   def list_books
     puts 'there is no book in the library' if @books.empty?
     @books.each_with_index do |book, index|

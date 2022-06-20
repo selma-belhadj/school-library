@@ -45,5 +45,3 @@ def exit_msg
 end
 
 main
-
-
