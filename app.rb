@@ -5,6 +5,7 @@ require './student'
 require './classroom'
 require './book'
 require './rental'
+require 'json'
 
 class App
   def initialize
@@ -124,5 +125,16 @@ class App
         puts "Book #{rental.book.title} has been rented to #{rental.person.name} on date #{rental.date}"
       end
     end
+  end
+
+  def save_books(file_name)
+    bk = []
+    @books.each do |book|
+    bk.push({
+        title: book.title,
+        author: book.author
+      })
+    end
+    File.write(file_name, JSON.generate(bk).to_s)
   end
 end

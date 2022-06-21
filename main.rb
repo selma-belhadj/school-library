@@ -32,6 +32,8 @@ def option(input)
   when '6'
     list_filtred_rentals
   when '7'
+    save_books('./data/books.json')
+    save_people('./data/persons.json')
     exit_msg
   else
     puts 'Please enter a number between 1 and 7.'
