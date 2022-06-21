@@ -1,8 +1,9 @@
-#require_relative './apps/handle_data'
+# require_relative './apps/handle_data'
 require './app'
 require 'json'
 
-#initialize_files
+initialize_files
+
 def main
   app = App.new
   app.start_console

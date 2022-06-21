@@ -152,25 +152,22 @@ class App
 
   def save_people(file_name)
     ppl = []
-    file = File.open(file_name)
     @persons.each do |person|
       ppl << if person.instance_of? Student
-        {
-          role: person.class.name,
-          name: person.name,
-          age: person.age,
-        }
-        elsif person.instance_of? Teacher
-        {
-          role: person.class.name,
-          name: person.name,
-          age: person.age,
-          specialization: person.specialization
-        }
-      end
+               {
+                 role: person.class.name,
+                 name: person.name,
+                 age: person.age
+               }
+             elsif person.instance_of? Teacher
+               {
+                 role: person.class.name,
+                 name: person.name,
+                 age: person.age,
+                 specialization: person.specialization
+               }
+             end
     end
-    File.write(file_name, JSON.generate(ppl).to_s, mode: "a+")
-    file.close
+    File.write(file_name, JSON.generate(ppl).to_s)
   end
-
 end
