@@ -1,17 +1,58 @@
-require './nameable'
-require './person'
-require './teacher'
-require './student'
-require './classroom'
-require './book'
-require './rental'
-require 'json'
+require './apps/books_app'
+require './classes/nameable'
+require './classes/person'
+require './classes/teacher'
+require './classes/student'
+require './classes/classroom'
+require './classes/book'
+require './classes/rental'
 
 class App
+  attr_accessor :books
+
   def initialize
-    @books = []
+    @books = BooksApp.new
     @persons = []
     @rentals = []
+  end
+
+  def list_options
+    puts
+    puts ' Please choose among the options below by pressing its corresponding number:'
+    puts '[1] List all books'
+    puts '[2] List all people'
+    puts '[3] Add a person'
+    puts '[4] Add a book'
+    puts '[5] Add a rental'
+    puts '[6] List all rentals for a given person id'
+    puts '[7] Exit'
+  end
+
+  def exit_msg
+    puts ' '
+    puts 'Thank you for using this App'
+    exit(true)
+  end
+
+  def option(input)
+    case input
+    when '1'
+      @books.list_books
+    when '2'
+      list_persons
+    when '3'
+      add_person
+    when '4'
+      @books.add_book
+    when '5'
+      add_rental
+    when '6'
+      list_filtred_rentals
+    when '7'
+      exit_msg
+    else
+      puts 'Please enter a number between 1 and 7.'
+    end
   end
 
   def start_console
@@ -19,13 +60,6 @@ class App
     until list_options
       input = gets.chomp
       option(input)
-    end
-  end
-
-  def list_books
-    puts 'there is no book in the library' if @books.empty?
-    @books.each_with_index do |book, index|
-      puts " [Book]- Index: #{index},  Title: #{book.title}, Author: #{book.author}, Id: #{book.id}"
     end
   end
 
@@ -86,17 +120,6 @@ class App
     puts '********** Teacher created successfully **********'
   end
 
-  def add_book
-    puts 'Create a new book'
-    print 'Enter book title: '
-    title = gets.chomp
-    print 'Enter author name: '
-    author = gets.chomp
-    book = Book.new(title, author)
-    @books.push(book)
-    puts "Book with title '#{book.title}' added successfully"
-  end
-
   def add_rental
     puts '********** Create a new rental **********'
     puts 'Select which book you want to rent by entering its index: '
@@ -127,19 +150,6 @@ class App
     end
   end
 
-  def save_books(file_name)
-    bk = []
-    file = File.open(file_name)
-    @books.each do |book|
-    bk.push({
-        title: book.title,
-        author: book.author
-      })
-    end
-    File.write(file_name, JSON.generate(bk).to_s, mode: "a+")
-    file.close
-  end
-
   def save_people(file_name)
     ppl = []
     file = File.open(file_name)
@@ -162,4 +172,5 @@ class App
     File.write(file_name, JSON.generate(ppl).to_s, mode: "a+")
     file.close
   end
+
 end

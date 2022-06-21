@@ -1,5 +1,5 @@
-require './nameable'
-require './rental'
+require './classes/nameable'
+require './classes/rental'
 
 class Person < Nameable
   attr_accessor :name, :age
