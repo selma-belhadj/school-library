@@ -1,4 +1,3 @@
-# require_relative './apps/handle_data'
 require './app'
 require 'json'
 

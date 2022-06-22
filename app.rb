@@ -64,34 +64,4 @@ class App
       option(input)
     end
   end
-
-  # def add_rental
-  #   puts '********** Create a new rental **********'
-  #   puts 'Select which book you want to rent by entering its index: '
-  #   list_books
-  #   book_index = gets.chomp.to_i
-  #   puts 'Select a person from the list by its index: '
-  #   list_persons
-  #   person_index = gets.chomp.to_i
-  #   puts 'Enter date of rentals: [format: yyyy-mm-dd]: '
-  #   date = gets.chomp.to_s
-  #   rental = Rental.new(date, @books[book_index], @persons[person_index])
-  #   @rentals << rental
-  #   puts ''
-  #   puts "Book #{@books[book_index].title} has been rented to #{@persons[person_index].name} on date #{date} "
-  #   puts '********** Rental created successfully **********'
-  # end
-
-  # def list_filtred_rentals
-  #   puts 'there is no person registred in the library so there is no rental' if @persons.empty?
-  #   puts 'To see person rentals enter the person ID: '
-  #   list_persons
-  #   person_id = gets.chomp.to_i
-  #   puts 'Rented Books:'
-  #   @rentals.each do |rental|
-  #     if rental.person.id == person_id
-  #       puts "Book #{rental.book.title} has been rented to #{rental.person.name} on date #{rental.date}"
-  #     end
-  #   end
-  # end
 end
