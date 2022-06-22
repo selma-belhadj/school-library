@@ -1,8 +1,7 @@
 require 'json'
-require './classes/book'
 
 def initialize_files
-  File.write('./data/books.json', []) unless File.exist?('./data/books.json')
+  File.write('./data/books.json', '[]') unless File.exist?('./data/books.json')
 end
 
 def save_books(books)
