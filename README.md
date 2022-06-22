@@ -2,7 +2,7 @@
 
 # OOP school library
 
-> An app to record what books are in the library and who borrows them. It allows the librarian of OOP University to:
+> An app to record what books are in the library and who borrows them. It allows the librarian to manage the entire libray using OOP written in Ruby University to:
 
 - Add new students or teachers.
 - Add new books.
