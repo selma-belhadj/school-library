@@ -1,1 +1,1 @@
-[{"role":"Student","name":"sdfgfdg","age":23},{"role":"Teacher","name":"kasjnfjksdf","age":45,"specialization":"Maths"}]
+[{"role":"Student","name":"sdfgfdg","age":"Student"},{"role":"Teacher","name":"kasjnfjksdf","age":45,"specialization":"Maths"},{"role":"Student","name":"nknk","age":67}]
