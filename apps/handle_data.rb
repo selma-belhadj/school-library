@@ -8,6 +8,9 @@ def initialize_files
 
   File.write('./data/persons.json', '[]') unless File.exist?('./data/persons.json')
   File.zero?('./data/persons.json') && File.write('./data/persons.json', '[]')
+
+  File.write('./data/rentals.json', '[]') unless File.exist?('./data/rentals.json')
+  File.zero?('./data/rentals.json') && File.write('./data/rentals.json', '[]')
 end
 
 def save_books(books)
