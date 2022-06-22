@@ -49,7 +49,7 @@ class App
     when '5'
       @rentals.add_rental
     when '6'
-      list_filtred_rentals
+      @rentals.list_filtred_rentals
     when '7'
       exit_msg
     else
